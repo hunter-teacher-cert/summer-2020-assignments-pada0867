@@ -9,10 +9,11 @@ public class Methods {
     System.out.println("You are " + age + " years old, your first pet was named " + pet + ", and you grew up on " + street + "Road/Street.");
   }
 
-  public static void height(int feet, int inches){
+  public static void height(String feet, int inches){
     System.out.println("You are " + feet + " and " + inches + " inches tall.");
   }
   public static void main(String[] args){// Need to do inputs here in the main because this information needs to be gathered BEFORE it is passed to the method.
+    // Gathering input from the user:
     System.out.println("Let's see if this works!");
     Scanner in = new Scanner(System.in);
     System.out.println("How old are you? ");
@@ -21,9 +22,11 @@ public class Methods {
     String pet = in.next();
     System.out.println("What street did you grow up on? ");
     String street = in.next();
+
+    //Calling the methods:
     zoo1(age, pet, street);
-    height(5,6);
+    height("five",6); //You didn't need to define the string 'feet' here in the main, you can just pass it.
   }
 }
 
-//Need to define the variable types in the main AND in the method!!!
+//Need to define the variable types in the main AND in the method if you want to use inputs
