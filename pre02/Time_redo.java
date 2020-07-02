@@ -21,6 +21,6 @@ public class Time_redo {
     System.out.println("The number of seconds since midnight is: " + totalSeconds);
     System.out.println("The number of seconds remaining in the day are: " + (secondsInDay-totalSeconds));
     System.out.println(pctDayPassed + "% of the day has passed.");
-    System.out.println("The amount of time that has passed since I started this is: " + (hourNow-hour) + " hours " + (minuteNow - minute) + " minutes " + " and " + (secondNow-second) + " seconds.");
+    System.out.println("The amount of time that has passed since I started this is: " + (hourNow-hour) + " hours " + (minuteNow - minute) + " minutes " + " and " + (secondNow-second) + " seconds");
   }
 }
