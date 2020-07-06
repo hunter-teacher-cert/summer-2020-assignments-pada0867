@@ -5,6 +5,8 @@ import java.util.Random;
 
 public class Methods {
 
+  int age = 30;
+  
   public static void zoo1(int age, String pet, String street){ //need to define the types of arguments are being passed to the method
     System.out.println("You are " + age + " years old, your first pet was named " + pet + ", and you grew up on " + street + "Road/Street.");
   }

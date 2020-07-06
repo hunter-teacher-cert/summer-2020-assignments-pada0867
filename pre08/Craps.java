@@ -42,4 +42,5 @@ public class Craps {
     int Sum = die_1 + die_2;
     return Sum;
     }
-  }
+
+}

@@ -17,7 +17,7 @@ public class Time {
 
 
     System.out.println(total_seconds_day +  " seconds since midnight");
-    System.out.println("The time is now: ");
+    System.out.println("The time is now : ");
     System.out.println(hours + " : " + minutes + " : " + seconds);
     System.out.println(total_seconds +  "  seconds today");
     percent = (total_seconds / total_seconds_day) * 100;

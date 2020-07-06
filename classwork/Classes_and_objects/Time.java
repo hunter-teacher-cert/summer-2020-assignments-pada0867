@@ -20,9 +20,9 @@ public class Time{
 
     //this is another type of constrctor that accepts parameters and passes them to objects
     public Time(int hour, int minute, int second) {
-    this.hour = hour;
-    this.minute = minute;
-    this.second = second;
+      this.hour = hour;
+      this.minute = minute;
+      this.second = second;
     }
 
     public String toString() {
