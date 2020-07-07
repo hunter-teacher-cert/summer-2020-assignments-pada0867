@@ -22,7 +22,7 @@ public class SuperArray {
       grow();
       this.data[numberElements-1] = value;
     }
-    if (this.data[index]!=0){ //deterines if the index is occupied by a value already
+    if (index<numberElements){  //shifting everything over if we're trying to add something to the right of the numberElements marker
       int[] new_array = new int[this.data.length]; //makes a new array
       for (int i=0; i<new_array.length;i++){ //fills in the new array with the original array's information
         new_array[i]=this.data[i];
@@ -39,25 +39,6 @@ public class SuperArray {
     else{
           this.data[index] = value;
     }
-
-/* add method iteration 2:
-    this.numberElements++;//increases the marker before adding something to the array
-    if (numberElements>this.data.length){//if add is called, and the marker has become larger than the array, a new space is created automatically before adding the value
-      grow();
-    }
-    this.data[numberElements-1] = value;
-*/
-
-/* add function iteration 1:
-    if (numberElements <= this.data.length){
-      this.data[numberElements] = value;
-      this.numberElements++;
-    }
-    if (numberElements==this.data.length){
-      this.grow(value);
-    }
-*/
-  }
 
   public void grow(){
     int[] new_array = new int[this.data.length+1]; //adds one extra index to the new array
@@ -109,13 +90,11 @@ public class SuperArray {
     array_1.add(8,7);
     array_1.add(9,8);
     array_1.add(10,9);
-    array_1.toString(array_1.data);
 
     //testing out the new add method
-    array_1.add(11,10); //works when trying to add something at a new index that is beyond the length of the array
-    array_1.add(100,2);
-    array_1.add(12,12);
-    array_1.add(100,8);
+    //array_1.add(11,10); //works when trying to add something at a new index that is beyond the length of the array
+    //array_1.add(100,4); //adding elements to an occupid index
+    //array_1.add(100,8);
     array_1.toString(array_1.data);
 
     }
