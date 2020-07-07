@@ -22,7 +22,7 @@ public class SuperArray {
       grow();
       this.data[numberElements-1] = value;
     }
-    if (index<numberElements){  //shifting everything over if we're trying to add something to the right of the numberElements marker
+    if (index<numberElements){  //shifting everything over if we're trying to add something to the left of the numberElements marker
       int[] new_array = new int[this.data.length]; //makes a new array
       for (int i=0; i<new_array.length;i++){ //fills in the new array with the original array's information
         new_array[i]=this.data[i];
