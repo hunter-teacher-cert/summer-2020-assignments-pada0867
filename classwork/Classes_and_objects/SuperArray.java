@@ -79,7 +79,9 @@ public class SuperArray {
   }
 
   public static void main(String[] args){
+
     SuperArray array_1 = new SuperArray();
+
     array_1.add(1,0);
     array_1.add(2,1);
     array_1.add(3,2);
@@ -91,10 +93,13 @@ public class SuperArray {
     array_1.add(9,8);
     array_1.add(10,9);
 
+    array_1.toString(array_1.data);
+
     //testing out the new add method
     //array_1.add(11,10); //works when trying to add something at a new index that is beyond the length of the array
     //array_1.add(100,4); //adding elements to an occupid index
     //array_1.add(100,8);
+    
     array_1.toString(array_1.data);
 
     }
