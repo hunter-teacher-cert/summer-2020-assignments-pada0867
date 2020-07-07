@@ -16,7 +16,39 @@ public class SuperArray {
     this.numberElements = 0; //this is a marker that tells where we are in the array
     }
 
-  public void add(int value){
+  public void add(int value, int index){
+    this.numberElements++;
+    if (numberElements>this.data.length){ //if the marker numberElements has become larger than the list when add is called, a new index is created
+      grow();
+      this.data[numberElements-1] = value;
+    }
+    if (this.data[index]!=0){ //deterines if the index is occupied by a value already
+      int[] new_array = new int[this.data.length]; //makes a new array
+      for (int i=0; i<new_array.length;i++){ //fills in the new array with the original array's information
+        new_array[i]=this.data[i];
+      }
+      for (int i=index; i<new_array.length;i++){ //goes to the desired index of the NEW array and starts 'erasing' everything in the rest of array
+        new_array[i]=0;
+      }
+      for (int i=index; i<new_array.length-1;i++){ //don't know why I need the -1 here! but it works ¯\_(ツ)_/¯
+        new_array[i+1]=this.data[i]; //starts copying the values from the original array into the new array starting at the desired index but shifted over
+      }
+      this.data = new_array;
+      this.data[index] = value; //places in the desired value at the desired index
+    }
+    else{
+          this.data[index] = value;
+    }
+
+/* add method iteration 2:
+    this.numberElements++;//increases the marker before adding something to the array
+    if (numberElements>this.data.length){//if add is called, and the marker has become larger than the array, a new space is created automatically before adding the value
+      grow();
+    }
+    this.data[numberElements-1] = value;
+*/
+
+/* add function iteration 1:
     if (numberElements <= this.data.length){
       this.data[numberElements] = value;
       this.numberElements++;
@@ -24,6 +56,19 @@ public class SuperArray {
     if (numberElements==this.data.length){
       this.grow(value);
     }
+*/
+  }
+
+  public void grow(){
+    int[] new_array = new int[this.data.length+1]; //adds one extra index to the new array
+    for (int i=0; i<this.data.length;i++){
+      new_array[i]=this.data[i];
+    }
+    this.data = new_array;
+  }
+
+  public void remove(int index){
+    this.data[index]=0;
   }
 
   public int get(int index){
@@ -52,41 +97,26 @@ public class SuperArray {
     System.out.println(Arrays.toString(x));
   }
 
-  public void grow(int n){
-    int[] new_array = new int[this.data.length+1]; //adds one extra index to the new array
-    for (int i=0; i<this.data.length;i++){
-      new_array[i]=this.data[i];
-    }
-    
-    this.data = new_array;
-
-
-
-  }
-
   public static void main(String[] args){
     SuperArray array_1 = new SuperArray();
-    array_1.add(1);
-    array_1.add(2);
-    array_1.add(3);
-    array_1.add(4);
-    array_1.add(5);
-    array_1.add(6);
-    array_1.add(7);
-    array_1.add(8);
-    array_1.add(9);
-    array_1.add(10);
-    array_1.add(11);
-
-    boolean one = array_1.isEmpty(array_1.data); //array_1 is using the method isEmpty
-    System.out.println(one);
-
+    array_1.add(1,0);
+    array_1.add(2,1);
+    array_1.add(3,2);
+    array_1.add(4,3);
+    array_1.add(5,4);
+    array_1.add(6,5);
+    array_1.add(7,6);
+    array_1.add(8,7);
+    array_1.add(9,8);
+    array_1.add(10,9);
     array_1.toString(array_1.data);
 
-    //array_1.grow();
-
-    //array_1.toString(array_1.data);
-
+    //testing out the new add method
+    array_1.add(11,10); //works when trying to add something at a new index that is beyond the length of the array
+    array_1.add(100,2);
+    array_1.add(12,12);
+    array_1.add(100,8);
+    array_1.toString(array_1.data);
 
     }
 }
