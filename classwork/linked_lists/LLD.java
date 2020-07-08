@@ -7,16 +7,20 @@ public class LLD{
 
     LL ll_one = new LL();
 
+    System.out.println(ll_one.isEmpty());
     ll_one.add("Jack");
     ll_one.add("Chris");
-    ll_one.add("Versa!");
     ll_one.add("Margot");
     ll_one.add("Price");
     System.out.println(ll_one);
+    ll_one.insert("X",4);
+    System.out.println(ll_one);
+    ll_one.remove(0);
+    System.out.println(ll_one);
+    ll_one.remove(3);
+    System.out.println(ll_one);
+    System.out.println(ll_one.length());
     System.out.println(ll_one.isEmpty());
-    System.out.println(ll_one.getData(0));
-
-
 
 
 /* making Nodes "by hand" and linking them together manually
@@ -40,14 +44,7 @@ public class LLD{
     System.out.println(n1.getNext());
     System.out.println(n1.getNext().getNext());
     System.out.println(n1.getNext().getNext().getNext());
-    System.out.println("~~~~~~~~~~~~~~~~~~");
-    n4.setNext(n5);
-    n5.setNext(n2);
-    System.out.println(n1.getData());
-    System.out.println(n1.getNext());
-    System.out.println(n1.getNext().getNext());
-    System.out.println(n1.getNext().getNext().getNext());
-    System.out.println(n1.getNext().getNext().getNext().getNext());
+
 */
 
   }
