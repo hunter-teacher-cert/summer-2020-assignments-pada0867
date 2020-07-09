@@ -19,6 +19,8 @@ public class LLD{
     System.out.println(ll_one);
     ll_one.remove(3);
     System.out.println(ll_one);
+    ll_one.set("Versa",1);
+    System.out.println(ll_one);
     System.out.println(ll_one.length());
     System.out.println(ll_one.isEmpty());
 
