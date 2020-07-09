@@ -22,6 +22,12 @@ public class LL{ //when you instantiate this class in the driver, you create a n
 
   //inserts data at specified index
   public void insert(String data, int index){
+    if (index>length || index < 0){
+      throw new IndexOutOfBoundsException();
+    }
+    if (data==null){
+      throw new IllegalArgumentException();
+    }
     Node new_node = new Node(data);
     Node temp = head;
     int count = 0;
@@ -48,6 +54,9 @@ public class LL{ //when you instantiate this class in the driver, you create a n
 // node we want to remove. Really the node we want to remove isn't REALLY
 // removed, the preceding node steps around it.
   public void remove(int index){
+    if (index>length || index < 0){
+      throw new IndexOutOfBoundsException();
+    }
     Node temp = head;
     int count = 0;
     if (index==0){
@@ -69,6 +78,9 @@ public class LL{ //when you instantiate this class in the driver, you create a n
 
   //returns the data at a specified index
   public String getData(int index){
+    if (index>length || index < 0){
+      throw new NoSuchElementException();
+    }
     Node temp = head;
     int count = 0;
     while(temp!=null){
@@ -78,11 +90,14 @@ public class LL{ //when you instantiate this class in the driver, you create a n
       temp = temp.getNext();
       count++;
     }
-    return "N/A";
+    return null;
   }
 
   // adds a new node to the beginning of a linked list
   public void add(String data){
+    if (data==null){
+      throw new IllegalArgumentException();
+    }
     Node new_node = new Node(data);
     //point the new node towards the head of the list
     new_node.setNext(head);
@@ -92,6 +107,12 @@ public class LL{ //when you instantiate this class in the driver, you create a n
   }
 
   public void set(String data, int index){
+    if (index>length || index < 0){
+      throw new IndexOutOfBoundsException();
+    }
+    if (data==null){
+      throw new IllegalArgumentException();
+    }
     Node temp = head;
     int count = 0;
     if (index==0){
