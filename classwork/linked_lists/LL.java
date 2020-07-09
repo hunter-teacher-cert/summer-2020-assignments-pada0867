@@ -91,6 +91,25 @@ public class LL{ //when you instantiate this class in the driver, you create a n
     length+=1;
   }
 
+  public void set(String data, int index){
+    Node temp = head;
+    int count = 0;
+    if (index==0){
+      remove(index);
+      add(data);
+    }
+    else{
+      while(temp!=null){
+        if(count == index){
+          remove(index);
+          insert(data,index);
+        }
+        count++;
+        temp = temp.getNext();
+        }
+      }
+  }
+
   //prints out all the nodes of a linked list
   public String toString(){
     String s = "";
