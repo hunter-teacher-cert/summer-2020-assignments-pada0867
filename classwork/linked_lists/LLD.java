@@ -15,7 +15,6 @@ public class LLD{
     System.out.println(ll_one);
     ll_one.insert("X",4);
     System.out.println(ll_one);
-    ll_one.remove(0);
     System.out.println(ll_one);
     ll_one.remove(3);
     System.out.println(ll_one);
@@ -23,7 +22,7 @@ public class LLD{
     System.out.println(ll_one);
     System.out.println(ll_one.length());
     System.out.println(ll_one.isEmpty());
-    ll_one.getData(10);
+
 
 
 
