@@ -79,7 +79,7 @@ public class LL{ //when you instantiate this class in the driver, you create a n
   //returns the data at a specified index
   public String getData(int index){
     if (index>length || index < 0){
-      throw new NoSuchElementException();
+      throw new IndexOutOfBoundsException();
     }
     Node temp = head;
     int count = 0;
