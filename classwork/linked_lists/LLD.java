@@ -23,6 +23,9 @@ public class LLD{
     System.out.println(ll_one);
     System.out.println(ll_one.length());
     System.out.println(ll_one.isEmpty());
+    ll_one.getData(10);
+
+
 
 
 /* making Nodes "by hand" and linking them together manually
