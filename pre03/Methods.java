@@ -6,7 +6,7 @@ import java.util.Random;
 public class Methods {
 
   int age = 30;
-  
+
   public static void zoo1(int age, String pet, String street){ //need to define the types of arguments are being passed to the method
     System.out.println("You are " + age + " years old, your first pet was named " + pet + ", and you grew up on " + street + "Road/Street.");
   }
@@ -16,7 +16,7 @@ public class Methods {
   }
   public static void main(String[] args){// Need to do inputs here in the main because this information needs to be gathered BEFORE it is passed to the method.
     // Gathering input from the user:
-    System.out.println("Let's see if this works!");
+    System.out.println();
     Scanner in = new Scanner(System.in);
     System.out.println("How old are you? ");
     int age = in.nextInt();
