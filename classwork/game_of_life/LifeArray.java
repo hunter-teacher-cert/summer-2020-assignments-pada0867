@@ -5,8 +5,19 @@ import java.util.*;
 public class LifeArray{
 
 	public static void main(String[] args){
+
+		/* Methods:
+		- colPop(int[][] a, int c, int value)
+		- rowPop(int[][] a, int r, int value)
+		- set(int[][] a, int value)
+		- invert(int[][] a)
+		- diagonal(int[][] a, int r, int c, int direction, int value)
+		- printArray(int[][] a)
+		*/
+
 		int array[][] = new int[20][20];
-  }// end main
+
+	}// end main
 
   public static void colPop(int[][] a, int c, int value) {
     for (int r = 0; r<a.length; r++){
