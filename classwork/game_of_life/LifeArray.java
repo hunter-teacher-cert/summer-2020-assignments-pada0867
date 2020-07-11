@@ -50,28 +50,28 @@ public class LifeArray{
       3: down + right
      */
 
+		 if (direction==0){
+       while(r>=0&&c<a.length){
+             a[r][c]=value;
+             r--;
+             c++;
+       }
+     }
+		 if (direction==1){
+			 while(r<a.length&&c<a.length){
+						 a[r][c]=value;
+						 r++;
+						 c++;
+			 }
+		 }
+		 if (direction==2){
+			 while(r<a.length&&c>=0){
+						 a[r][c]=value;
+						 r++;
+						 c--;
+			 }
+		 }
     if (direction==3){
-      while(r<a.length&&c<a.length){
-            a[r][c]=value;
-            r++;
-            c++;
-      }
-    }
-    if (direction==2){
-      while(r<a.length&&c>=0){
-            a[r][c]=value;
-            r++;
-            c--;
-      }
-    }
-    if (direction==1){
-      while(r>=0&&c<a.length){
-            a[r][c]=value;
-            r--;
-            c++;
-      }
-    }
-    if (direction==0){
       while(r>=0&&c>=0){
             a[r][c]=value;
             r--;
