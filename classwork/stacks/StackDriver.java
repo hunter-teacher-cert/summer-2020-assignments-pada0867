@@ -16,6 +16,7 @@ public class StackDriver{
     stack.pop();
     System.out.println(stack);
     System.out.println(stack.size());
+    System.out.println(stack.top());
 
   }
 
