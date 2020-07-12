@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class StackNode{ //this is the class of Nodes. All nodes will have the attributes of data and next (the Node they point to next!)
+public class StackNode{ //this is the class of Nodes. All nodes will have the attributes of data and next
 
   private String data;
   private StackNode next;
