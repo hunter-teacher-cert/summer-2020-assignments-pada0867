@@ -19,26 +19,20 @@ public class Stack{ //when you instantiate this class in the driver, you create 
     return size;
   }
 
-  public void pop(){
-    System.out.println(head.getData());
-    //StackNode temp = head.getNext();
-    //temp.setNext(temp.getNext());
+  public String pop(){
+    String popped = head.getData();
     head = head.getNext();
     size-=1;
+    return popped;
   }
 
   //returns the data of the first node
   public String top(){
-    String s = "";
-    s = s + head.getData();
-    return s;
+    return head.getData();
   }
 
   // adds a new node to the beginning of a stack
   public void push(String data){
-    if (data==null){
-      throw new IllegalArgumentException();
-    }
     StackNode new_node = new StackNode(data);
     //point the new node towards the head of the stack
     new_node.setNext(head);
