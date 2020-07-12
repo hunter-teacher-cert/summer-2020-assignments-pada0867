@@ -28,7 +28,7 @@ public class Stack{ //when you instantiate this class in the driver, you create 
   }
 
   //returns the data of the first node
-  public String getData(){
+  public String top(){
     String s = "";
     s = s + head.getData();
     return s;
