@@ -123,14 +123,17 @@ public class Boogle {
   //##################################################
   //##################################################
 
-  public static void sort(ArrayList list){
+  public static void sort(ArrayList <Integer> list){
+    // if you don't specify that the incoming array is <Integer>,
+    //then you need to specify (int) later when
+    //using get: (int)list.get(i)
     int index_smallest;
     int value_smallest;
     int value_first;
     for (int i = 0; i<list.size()-1; i++){
       index_smallest = findSmallest(list,i,list.size()-1);// finds the index of the smallest value
-      value_smallest = (int)list.get(index_smallest);// sets variable smallest to the VALUE of the smallest element
-      value_first = (int)list.get(i);
+      value_smallest = list.get(index_smallest);// sets variable smallest to the VALUE of the smallest element
+      value_first = list.get(i);
       list.set(i,value_smallest);
       list.set(index_smallest,value_first);
     }
