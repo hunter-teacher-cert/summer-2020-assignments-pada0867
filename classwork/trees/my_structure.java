@@ -25,9 +25,9 @@ use a linked list for the chained seconary structure because I want to be able t
 
 <>Structure<>
 - Last names stored in a hash table
-- First names stored in a chained array list
+- First names and phone numbers stored in a chained array list
 
 <>Search<>
-- will pefofrm a binary search using the ASCII codes of last names and first names
+- will perform a binary search using the ASCII codes of last names and first names
 
 */
